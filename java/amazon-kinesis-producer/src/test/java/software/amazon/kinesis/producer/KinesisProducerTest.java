@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.amazonaws.services.kinesis.producer;
+package software.amazon.kinesis.producer;
 
 import com.amazonaws.services.schemaregistry.common.Schema;
 import org.apache.commons.lang3.StringUtils;

@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.amazonaws.services.kinesis.producer;
+package software.amazon.kinesis.producer;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;

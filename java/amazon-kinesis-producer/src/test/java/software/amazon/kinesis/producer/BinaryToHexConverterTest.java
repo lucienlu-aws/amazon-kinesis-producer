@@ -1,4 +1,4 @@
-package com.amazonaws.services.kinesis.producer;
+package software.amazon.kinesis.producer;
 
 import org.junit.Test;
 
