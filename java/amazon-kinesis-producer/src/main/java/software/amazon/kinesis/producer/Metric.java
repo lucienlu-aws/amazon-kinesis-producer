@@ -90,7 +90,7 @@ public class Metric {
         return duration;
     }
 
-    protected Metric(com.amazonaws.services.kinesis.producer.protobuf.Messages.Metric m) {
+    protected Metric(software.amazon.kinesis.producer.protobuf.Messages.Metric m) {
         this.name = m.getName();
         this.duration = m.getSeconds();
         

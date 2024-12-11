@@ -15,7 +15,7 @@
 
 package software.amazon.kinesis.producer;
 
-import com.amazonaws.services.kinesis.producer.protobuf.Messages;
+import software.amazon.kinesis.producer.protobuf.Messages;
 
 /**
  * Represents one attempt at writing a record to the backend. The attempt may or
