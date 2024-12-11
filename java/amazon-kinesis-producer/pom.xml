@@ -36,7 +36,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.4.1</version>
                 <configuration>
-                    <excludePackageNames>com.amazonaws.services.kinesis.producer.protobuf</excludePackageNames>
+                    <excludePackageNames>software.amazon.kinesis.producer.protobuf</excludePackageNames>
                 </configuration>
                 <executions>
                     <execution>
