@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.amazonaws.services.kinesis.producer.sample;
+package software.amazon.kinesis.producer.sample;
 
 import java.nio.ByteBuffer;
 import java.util.concurrent.Executors;
@@ -22,14 +22,14 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.amazonaws.services.kinesis.producer.UnexpectedMessageException;
+import software.amazon.kinesis.producer.UnexpectedMessageException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.amazonaws.services.kinesis.producer.Attempt;
-import com.amazonaws.services.kinesis.producer.KinesisProducer;
-import com.amazonaws.services.kinesis.producer.UserRecordFailedException;
-import com.amazonaws.services.kinesis.producer.UserRecordResult;
+import software.amazon.kinesis.producer.Attempt;
+import software.amazon.kinesis.producer.KinesisProducer;
+import software.amazon.kinesis.producer.UserRecordFailedException;
+import software.amazon.kinesis.producer.UserRecordResult;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;

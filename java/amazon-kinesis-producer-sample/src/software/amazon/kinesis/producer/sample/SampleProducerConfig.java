@@ -1,6 +1,6 @@
-package com.amazonaws.services.kinesis.producer.sample;
+package software.amazon.kinesis.producer.sample;
 
-import com.amazonaws.services.kinesis.producer.KinesisProducerConfiguration;
+import software.amazon.kinesis.producer.KinesisProducerConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider;
