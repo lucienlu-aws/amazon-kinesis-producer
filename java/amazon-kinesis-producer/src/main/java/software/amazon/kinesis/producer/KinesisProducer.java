@@ -13,14 +13,14 @@
  * limitations under the License.
  */
 
-package com.amazonaws.services.kinesis.producer;
+package software.amazon.kinesis.producer;
 
-import com.amazonaws.services.kinesis.producer.protobuf.Messages;
-import com.amazonaws.services.kinesis.producer.protobuf.Messages.Flush;
-import com.amazonaws.services.kinesis.producer.protobuf.Messages.Message;
-import com.amazonaws.services.kinesis.producer.protobuf.Messages.MetricsRequest;
-import com.amazonaws.services.kinesis.producer.protobuf.Messages.MetricsResponse;
-import com.amazonaws.services.kinesis.producer.protobuf.Messages.PutRecord;
+import software.amazon.kinesis.producer.protobuf.Messages;
+import software.amazon.kinesis.producer.protobuf.Messages.Flush;
+import software.amazon.kinesis.producer.protobuf.Messages.Message;
+import software.amazon.kinesis.producer.protobuf.Messages.MetricsRequest;
+import software.amazon.kinesis.producer.protobuf.Messages.MetricsResponse;
+import software.amazon.kinesis.producer.protobuf.Messages.PutRecord;
 import com.amazonaws.services.schemaregistry.common.Schema;
 import com.amazonaws.services.schemaregistry.serializers.GlueSchemaRegistrySerializer;
 import com.google.common.collect.ImmutableMap;

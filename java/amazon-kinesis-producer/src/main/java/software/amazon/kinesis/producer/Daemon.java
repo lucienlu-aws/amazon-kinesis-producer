@@ -13,10 +13,10 @@
  * limitations under the License.
  */
 
-package com.amazonaws.services.kinesis.producer;
+package software.amazon.kinesis.producer;
 
-import com.amazonaws.services.kinesis.producer.protobuf.Messages;
-import com.amazonaws.services.kinesis.producer.protobuf.Messages.Message;
+import software.amazon.kinesis.producer.protobuf.Messages;
+import software.amazon.kinesis.producer.protobuf.Messages.Message;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.google.protobuf.ByteString;
 import org.apache.commons.lang3.StringUtils;

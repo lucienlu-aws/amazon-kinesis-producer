@@ -13,14 +13,14 @@
  * limitations under the License.
  */
 
-package com.amazonaws.services.kinesis.producer;
+package software.amazon.kinesis.producer;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import com.amazonaws.services.kinesis.producer.protobuf.Messages.Dimension;
-import com.amazonaws.services.kinesis.producer.protobuf.Messages.Stats;
+import software.amazon.kinesis.producer.protobuf.Messages.Dimension;
+import software.amazon.kinesis.producer.protobuf.Messages.Stats;
 
 /**
  * A metric consists of a name, a list of dimensions, a set of statistics, and

@@ -1,5 +1,3 @@
-package com.amazonaws.services.kinesis.producer;
-
 /*
  * Copyright 2019 Amazon.com, Inc. or its affiliates.
  * Licensed under the Apache License, Version 2.0 (the
@@ -15,12 +13,12 @@ package com.amazonaws.services.kinesis.producer;
  * limitations under the License.
  */
 
-public class FutureTimedOutException extends Exception {
-    private static final long serialVersionUID = 3168271192277927600L;
+package software.amazon.kinesis.producer;
 
-    public FutureTimedOutException(String message) {
+public class DaemonException extends RuntimeException {
+    private static final long serialVersionUID = -1161618354800585162L;
+
+    public DaemonException(String message) {
         super(message);
     }
 }
-
-

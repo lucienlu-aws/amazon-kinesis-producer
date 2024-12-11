@@ -1,4 +1,4 @@
-package com.amazonaws.services.kinesis.producer;
+package software.amazon.kinesis.producer;
 
 import java.nio.ByteBuffer;
 import java.util.List;

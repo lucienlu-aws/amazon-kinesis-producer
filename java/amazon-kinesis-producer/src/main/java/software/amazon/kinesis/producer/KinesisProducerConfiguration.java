@@ -13,11 +13,11 @@
  * limitations under the License.
  */
 
-package com.amazonaws.services.kinesis.producer;
+package software.amazon.kinesis.producer;
 
-import com.amazonaws.services.kinesis.producer.protobuf.Config.AdditionalDimension;
-import com.amazonaws.services.kinesis.producer.protobuf.Config.Configuration;
-import com.amazonaws.services.kinesis.producer.protobuf.Messages.Message;
+import software.amazon.kinesis.producer.protobuf.Config.AdditionalDimension;
+import software.amazon.kinesis.producer.protobuf.Config.Configuration;
+import software.amazon.kinesis.producer.protobuf.Messages.Message;
 import com.amazonaws.services.schemaregistry.common.configs.GlueSchemaRegistryConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

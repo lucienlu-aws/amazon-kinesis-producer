@@ -1,4 +1,4 @@
-package com.amazonaws.services.kinesis.producer;
+package software.amazon.kinesis.producer;
 
 import com.amazonaws.services.schemaregistry.common.configs.GlueSchemaRegistryConfiguration;
 import com.amazonaws.services.schemaregistry.serializers.GlueSchemaRegistrySerializer;
