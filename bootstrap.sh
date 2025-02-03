@@ -12,16 +12,16 @@ silence() {
   fi
 }
 
-OPENSSL_VERSION="1.1.1s"
+OPENSSL_VERSION="3.4.0"
 BOOST_VERSION="1.76.0"
 BOOST_VERSION_UNDERSCORED="${BOOST_VERSION//\./_}" # convert from 1.76.0 to 1_76_0
-ZLIB_VERSION="1.2.13"
+ZLIB_VERSION="1.3.1"
 PROTOBUF_VERSION="3.11.4"
-CURL_VERSION="7.86.0"
+CURL_VERSION="8.11.1"
 AWS_SDK_CPP_VERSION="1.11.420"
 
 LIB_OPENSSL="https://www.openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz"
-LIB_BOOST="https://boostorg.jfrog.io/artifactory/main/release/${BOOST_VERSION}/source/boost_${BOOST_VERSION_UNDERSCORED}.tar.gz"
+LIB_BOOST="https://archives.boost.io/release/${BOOST_VERSION}/source/boost_${BOOST_VERSION_UNDERSCORED}.tar.gz"
 LIB_ZLIB="https://zlib.net/fossils/zlib-${ZLIB_VERSION}.tar.gz"
 LIB_PROTOBUF="https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOBUF_VERSION}/protobuf-all-${PROTOBUF_VERSION}.tar.gz"
 LIB_CURL="https://curl.haxx.se/download/curl-${CURL_VERSION}.tar.gz"
