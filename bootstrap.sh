@@ -227,7 +227,7 @@ if [ ! -d "curl-${CURL_VERSION}" ]; then
     sed -Ei .bak 's/#define HAVE_CLOCK_GETTIME_MONOTONIC 1//' lib/curl_config.h
   else
     silence conf --disable-shared --disable-ldap --disable-ldaps --without-libidn2 \
-      --enable-threaded-resolver --disable-debug --without-libssh2 --without-ca-bundle --with-ssl="${INSTALL_DIR}"
+      --enable-threaded-resolver --disable-debug --without-libpsl --without-libssh2 --without-ca-bundle --with-ssl="${INSTALL_DIR}"
   fi
 
   silence make -j
