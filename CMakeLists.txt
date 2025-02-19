@@ -241,7 +241,7 @@ foreach(proto ${PROTO_FILES})
 endforeach()
 
 add_library(LibCrypto STATIC IMPORTED)
-set_property(TARGET LibCrypto PROPERTY IMPORTED_LOCATION ${THIRD_PARTY_LIB_DIR}/libcrypto.a)
+set_property(TARGET LibCrypto PROPERTY IMPORTED_LOCATION ${THIRD_PARTY_LIB64_DIR}/libcrypto.a)
 set_property(TARGET LibCrypto PROPERTY IMPORTED_LINK_INTERFACE_LIBRARIES ${LIBDL_LIBRARIES})
 
 add_library(LibSsl STATIC IMPORTED)
