@@ -16,6 +16,7 @@
 package software.amazon.kinesis.producer.sample;
 
 import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ScheduledExecutorService;
@@ -28,6 +29,7 @@ import org.slf4j.LoggerFactory;
 
 import software.amazon.kinesis.producer.Attempt;
 import software.amazon.kinesis.producer.KinesisProducer;
+import software.amazon.kinesis.producer.UserRecord;
 import software.amazon.kinesis.producer.UserRecordFailedException;
 import software.amazon.kinesis.producer.UserRecordResult;
 import com.google.common.util.concurrent.FutureCallback;
@@ -99,15 +101,16 @@ public class SampleProducer {
                 if (t instanceof UserRecordFailedException) {
                     int attempts = ((UserRecordFailedException) t).getResult().getAttempts().size()-1;
                     Attempt last = ((UserRecordFailedException) t).getResult().getAttempts().get(attempts);
+                    UserRecord userRecord = ((UserRecordFailedException) t).getResult().getUserRecord();
                     if(attempts > 1) {
                         Attempt previous = ((UserRecordFailedException) t).getResult().getAttempts().get(attempts - 1);
                         log.error(String.format(
-                                "Record failed to put - %s : %s. Previous failure - %s : %s",
-                                last.getErrorCode(), last.getErrorMessage(), previous.getErrorCode(), previous.getErrorMessage()));
+                                "UserRecord %s failed to put - %s : %s. Previous failure - %s : %s",
+                                userRecord, last.getErrorCode(), last.getErrorMessage(), previous.getErrorCode(), previous.getErrorMessage()));
                     }else{
                         log.error(String.format(
-                                "Record failed to put - %s : %s.",
-                                last.getErrorCode(), last.getErrorMessage()));
+                                "UserRecord %s failed to put - %s : %s.",
+                                userRecord, last.getErrorCode(), last.getErrorMessage()));
                     }
 
                 } else if (t instanceof UnexpectedMessageException) {
@@ -120,6 +123,9 @@ public class SampleProducer {
             @Override
             public void onSuccess(UserRecordResult result) {
                 completed.getAndIncrement();
+
+                UserRecord userRecord = result.getUserRecord();
+                log.info(String.format("Successfully put UserRecord %s", userRecord));
             }
         };
         
